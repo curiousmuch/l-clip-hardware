@@ -1,0 +1,127 @@
+EESchema Schematic File Version 4
+LIBS:L-Clip-V0-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x04_Male J4
+U 1 1 5B673C77
+P 6100 3550
+F 0 "J4" H 6072 3430 50  0000 R CNN
+F 1 "NEO-6M" H 6072 3521 50  0000 R CNN
+F 2 "" H 6100 3550 50  0001 C CNN
+F 3 "~" H 6100 3550 50  0001 C CNN
+	1    6100 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q2
+U 1 1 5B673F64
+P 5300 3900
+F 0 "Q2" H 5505 3946 50  0000 L CNN
+F 1 "BSS138" H 5505 3855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5500 3825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 5300 3900 50  0001 L CNN
+	1    5300 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR069
+U 1 1 5B674408
+P 5400 4200
+F 0 "#PWR069" H 5400 3950 50  0001 C CNN
+F 1 "GND" H 5405 4027 50  0000 C CNN
+F 2 "" H 5400 4200 50  0001 C CNN
+F 3 "" H 5400 4200 50  0001 C CNN
+	1    5400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4100 5400 4200
+Wire Wire Line
+	5400 3650 5400 3700
+Wire Wire Line
+	5400 3650 5900 3650
+Wire Wire Line
+	5400 3350 5400 3150
+Wire Wire Line
+	5400 3350 5900 3350
+$Comp
+L power:+3.3V #PWR068
+U 1 1 5B6746C8
+P 5400 3150
+F 0 "#PWR068" H 5400 3000 50  0001 C CNN
+F 1 "+3.3V" H 5415 3323 50  0000 C CNN
+F 2 "" H 5400 3150 50  0001 C CNN
+F 3 "" H 5400 3150 50  0001 C CNN
+	1    5400 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3900 4950 3900
+$Comp
+L Device:R R20
+U 1 1 5B674769
+P 4950 4150
+F 0 "R20" H 5020 4196 50  0000 L CNN
+F 1 "R" H 5020 4105 50  0000 L CNN
+F 2 "" V 4880 4150 50  0001 C CNN
+F 3 "~" H 4950 4150 50  0001 C CNN
+	1    4950 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3900 4950 4000
+$Comp
+L Device:R R19
+U 1 1 5B67489D
+P 4700 3900
+F 0 "R19" V 4493 3900 50  0000 C CNN
+F 1 "R" V 4584 3900 50  0000 C CNN
+F 2 "" V 4630 3900 50  0001 C CNN
+F 3 "~" H 4700 3900 50  0001 C CNN
+	1    4700 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3900 4850 3900
+Connection ~ 4950 3900
+$Comp
+L power:GND #PWR067
+U 1 1 5B674ACD
+P 4950 4400
+F 0 "#PWR067" H 4950 4150 50  0001 C CNN
+F 1 "GND" H 4955 4227 50  0000 C CNN
+F 2 "" H 4950 4400 50  0001 C CNN
+F 3 "" H 4950 4400 50  0001 C CNN
+	1    4950 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4300 4950 4400
+Wire Wire Line
+	4300 3900 4550 3900
+Text GLabel 4300 3900 0    50   Input ~ 0
+GPS_POWER
+Text GLabel 4850 3450 0    50   Input ~ 0
+GPS_TX
+Text GLabel 4850 3550 0    50   Input ~ 0
+GPS_RX
+Text Notes 3950 4800 0    50   ~ 0
+Notes:\nGPS is currently HiLetgo GY-GPS6MV2 NEO-6M-0-001 Module\n
+Wire Wire Line
+	4850 3450 5900 3450
+Wire Wire Line
+	4850 3550 5900 3550
+$EndSCHEMATC
